@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <link rel="icon" href="flag.jpg">
+  <link rel="icon" href="IMG/flag.jpg">
   
   <head>
     <title>
@@ -34,8 +34,8 @@
       <p>
       <label>Марка: <input type="text"></label><br>
       <label>Название: <input type="text"></label><br>
-      <label>Мощность двигателя: <input type="text"></label><br>
-      <label>Год выпуска: <input type="text"></label><br>
+      <label>Мощность двигателя: от <input type="number" min="1" max="1500"> до <input type="number" min="1" max="1500"></label><br>
+      <label>Год выпуска: от <input type="date"> до <input type="date"></label><br>
       <label>Тип кузова: <input type="text"></label><br>
       </p>
       <p>
@@ -99,6 +99,7 @@
   </form>
   </details>
 </p>
+    
 <p>
   <details>
       <p><summary>График</summary></p>
@@ -107,12 +108,16 @@
   Значение по оси OX:<br>
   <label><input type="radio" name="graph" value="japponi">Мощность</label><br>
   <label><input type="radio" name="graph" value="date">Год выпуска</label><br>
+  <label><input type="radio" name="graph" value="marka">Марка</label><br>
+  <label><input type="radio" name="graph" value="kuz">Тип кузова</label><br>
   </p>
   <p>
   Результат:<br>
-  <label><input type="checkbox" name="graph" value="marka">Марка</label><br>
-  <label><input type="checkbox" name="graph" value="name">Название</label><br>
-  <label><input type="checkbox" name="graph" value="kuz">Тип кузова</label><br>
+  <label><input type="checkbox" name="graph" value="marka">Средний год</label><br>
+  <label><input type="checkbox" name="graph" value="power">Максимальная мощность</label><br>
+  <label><input type="checkbox" name="graph" value="power">Минимальная мощность</label><br>
+  <label><input type="checkbox" name="graph" value="marka">Количество марок</label><br>
+  <label><input type="checkbox" name="graph" value="kuz">Количество кузовов</label><br>
   </p>
 
   <p>
