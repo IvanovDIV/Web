@@ -196,7 +196,7 @@ body{
   .sub_img img{
       display: block;
       min-width:100px;
-      max-width: 50%;
+      max-width: 100%;
       flex-grow:1;
   }
   .logo_block{
