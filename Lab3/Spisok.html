@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+  <link rel="icon" href="IMG/flag.jpg">
+  
+  <head>
+    <title>
+      日本車(Японские машины)
+    </title>
+  </head>
+
+<body bgcolor="#FFA07A" text="#C71585" link="#FF00FF" alink="#E6E6FA">
+
+  <font face="Segoe UI">
+    <p align="center">
+        <font size="20">
+        <a href="main.html">Главная</a>
+        <a href="Light.html">Легковые</a>
+        <a href="Cargo.html">Грузовые</a>
+        </font>        
+    </p>
+
+    <div align="center">
+      <p>
+          <h1 text="Violet"><code><i>Список японских автомобилей</i></code></h1>
+      </p>
+      <hr color="purple">
+    </div>
+
+<p>
+  <details>
+      <p><summary>Фильтр</summary></p>
+  <form>
+      <p>
+      <label>Марка: <input type="text"></label><br>
+      <label>Название: <input type="text"></label><br>
+      <label>Мощность двигателя: от <input type="number" min="1" max="1500"> до <input type="number" min="1" max="1500"></label><br>
+      <label>Год выпуска: от <input type="date"> до <input type="date"></label><br>
+      <label>Тип кузова: <input type="text"></label><br>
+      </p>
+      <p>
+      <input type="button" value="Найти">
+      <input type="reset" value="Сбросить фильтр">
+      </p>
+  </form>
+  </details>
+</p>
+
+<p>
+  <details>
+      <summary>Сортировка</summary>
+  <form>
+      <p>Первый уровень:
+          <select>
+              <option>Марка</option>
+              <option>Название</option>
+              <option>Мощность двигателя</option>
+              <option>Год выпуска</option>
+              <option>Тип кузова</option>
+          </select>
+          <select>
+              <option>По возрастанию</option>
+              <option>По убыванию</option>
+          </select>
+      </p>
+
+      <p>Второй уровень:
+          <select>
+            <option>Марка</option>
+            <option>Название</option>
+            <option>Мощность двигателя</option>
+            <option>Год выпуска</option>
+            <option>Тип кузова</option>
+          </select>
+          <select>
+              <option>По возрастанию</option>
+              <option>По убыванию</option>
+          </select>
+      </p>
+
+      <p>Третий уровень:
+          <select>
+            <option>Марка</option>
+            <option>Название</option>
+            <option>Мощность двигателя</option>
+            <option>Год выпуска</option>
+            <option>Тип кузова</option>
+          </select>
+          <select>
+              <option>По возрастанию</option>
+              <option>По убыванию</option>
+          </select>
+      </p>
+
+      <p>
+          <input type="button" value="Сортировать">
+          <input type="reset" value="Сбросить настройки">
+      </p>
+  </form>
+  </details>
+</p>
+
+<p>
+  <details>
+      <p><summary>График</summary></p>
+  <form>
+      <p>
+  Значение по оси OX:<br>
+  <label><input type="radio" name="graph" value="japponi">Мощность</label><br>
+  <label><input type="radio" name="graph" value="date">Год выпуска</label><br>
+  <label><input type="radio" name="graph" value="marka">Марка</label><br>
+  <label><input type="radio" name="graph" value="kuz">Тип кузова</label><br>
+  </p>
+  <p>
+  Результат:<br>
+  <label><input type="checkbox" name="graph" value="marka">Средний год</label><br>
+  <label><input type="checkbox" name="graph" value="power">Максимальная мощность</label><br>
+  <label><input type="checkbox" name="graph" value="power">Минимальная мощность</label><br>
+  <label><input type="checkbox" name="graph" value="marka">Количество марок</label><br>
+  <label><input type="checkbox" name="graph" value="kuz">Количество кузовов</label><br>
+  </p>
+
+  <p>
+    <input type="button" value="Построить">
+    <input type="reset" value="Сбросить настройки">
+  </p>
+
+  </form>
+  </details>
+</p>
+
+<p>
+  <table border="1" align="center" cellpadding="5" color="purple">
+      <thead>
+      <tr>
+          <th>Марка</th>
+          <th>Название</th>
+          <th>Мощность двигателя(японские пони)</th>
+          <th>Год выпуска</th>
+          <th>Тип кузова</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr><td>Toyota</td><td>Surf</td><td>183</td><td>1986</td><td>Кроссовер</td>
+        <tr><td>Toyota</td><td>Supra</td><td>544</td><td>1998</td><td>Купе</td>
+        <tr><td>Toyota</td><td>Mark II</td><td>220</td><td>1986</td><td>Седан</td>
+        <tr><td>Honda</td><td>Accord</td><td>160</td><td>1980</td><td>Седан</td>
+        <tr><td>Mitsubishi</td><td>Lancer Evolution VIII</td><td>280</td><td>2003</td><td>Седан</td>
+        <tr><td>Subaru</td><td>Legacy</td><td>149</td><td>1992</td><td>Седан</td>
+        <tr><td>Infiniti</td><td>QX56</td><td>313</td><td>2005</td><td>Внедорожник</td>
+        <tr><td>Mazda</td><td>RX-7</td><td>300</td><td>1992</td><td>Купе</td>
+        <tr><td>Nissan</td><td>Skyline</td><td>400</td><td>1990</td><td>Седан</td>
+        <tr><td>Nissan</td><td>Tiida</td><td>140</td><td>2004</td><td>Хэтчбэк</td>
+        <tr><td>Honda</td><td>Civic</td><td>190</td><td>2021</td><td>Седан</td>
+        <tr><td>Toyota</td><td>Corolla</td><td>160</td><td>2018</td><td>Седан</td>
+        <tr><td>Toyota</td><td>Allion</td><td>150</td><td>2021</td><td>Седан</td>
+        <tr><td>Toyota</td><td>Crown</td><td>220</td><td>2018</td><td>Седан</td>
+        <tr><td>Toyota</td><td>Vitz</td><td>102</td><td>2016</td><td>Хэтчбэк</td>
+        <tr><td>Subaru</td><td>BRZ</td><td>240</td><td>2021</td><td>Купе</td>
+        <tr><td>Subaru</td><td>Impreza</td><td>190</td><td>2009</td><td>Хэтчбэк</td>
+        <tr><td>Toyota</td><td>Town Ace Noah</td><td>135</td><td>1998</td><td>Минивэн</td>
+        <tr><td>Infiniti</td><td>Q50</td><td>200</td><td>2018</td><td>Седан</td>
+        <tr><td>Infiniti</td><td>Q30</td><td>180</td><td>2014</td><td>Хэтчбэк</td>
+        <tr><td>Infiniti</td><td>QX30</td><td>205</td><td>2016</td><td>Кроссовер</td>
+        <tr><td>Toyota</td><td>Land Cruiser</td><td>300</td><td>2016</td><td>Внедорожник</td>
+        <tr><td>Toyota</td><td>Voxy</td><td>150</td><td>2009</td><td>Минивэн</td>
+        <tr><td>Honda</td><td>Freed</td><td>139</td><td>2010</td><td>Минивэн</td>
+        <tr><td>Honda</td><td>Odyssey</td><td>140</td><td>2012</td><td>Универсал</td>
+        <tr><td>Honda</td><td>CR-V</td><td>155</td><td>2014</td><td>Кроссовер</td>
+        <tr><td>Toyota</td><td>Aqua</td><td>100</td><td>2005</td><td>Хэтчбэк</td>
+        <tr><td>Honda</td><td>Fit</td><td>130</td><td>2017</td><td>Хэтчбэк</td>
+        <tr><td>Suzuki</td><td>Ignis</td><td>110</td><td>2014</td><td>Хэтчбэк</td>
+        <tr><td>Suzuki</td><td>Swift</td><td>95</td><td>2009</td><td>Хэтчбэк</td>
+        <tr><td>Suzuki</td><td>Ciaz</td><td>130</td><td>2016</td><td>Седан</td>
+        <tr><td>Mazda</td><td>Bongo</td><td>250</td><td>2017</td><td>Пикап</td>
+        <tr><td>Mazda</td><td>CX-8</td><td>230</td><td>2017</td><td>Кроссовер</td>
+        <tr><td>Toyota</td><td>Highlander</td><td>190</td><td>2005</td><td>Внедорожник</td>
+        <tr><td>Mazda</td><td>Titan</td><td>160</td><td>2004</td><td>Трак</td>
+        <tr><td>Toyota</td><td>Chaser</td><td>220</td><td>1996</td><td>Седан</td>
+        <tr><td>Toyota</td><td>Alphard</td><td>150</td><td>2009</td><td>Минивэн</td>
+        <tr><td>Nissan</td><td>Sirena</td><td>140</td><td>2015</td><td>Минивэн</td>
+        <tr><td>Honda</td><td>Odyssey</td><td>140</td><td>2012</td><td>Универсал</td>
+        <tr><td>Honda</td><td>CR-V</td><td>155</td><td>2014</td><td>Кроссовер</td>
+        <tr><td>Toyota</td><td>Aqua</td><td>100</td><td>2005</td><td>Хэтчбэк</td>
+        <tr><td>Honda</td><td>Fit</td><td>130</td><td>2017</td><td>Хэтчбэк</td>
+        <tr><td>Suzuki</td><td>Ignis</td><td>110</td><td>2014</td><td>Хэтчбэк</td>
+        <tr><td>Suzuki</td><td>Swift</td><td>95</td><td>2009</td><td>Хэтчбэк</td>
+        <tr><td>Suzuki</td><td>Ciaz</td><td>130</td><td>2016</td><td>Седан</td>
+        <tr><td>Mazda</td><td>Bongo</td><td>250</td><td>2017</td><td>Пикап</td>
+        <tr><td>Mazda</td><td>CX-8</td><td>230</td><td>2017</td><td>Кроссовер</td>
+        <tr><td>Toyota</td><td>Highlander</td><td>190</td><td>2005</td><td>Внедорожник</td>
+        <tr><td>Mazda</td><td>Titan</td><td>160</td><td>2004</td><td>Трак</td>
+        <tr><td>Toyota</td><td>Chaser</td><td>220</td><td>1996</td><td>Седан</td>
+        <tr><td>Toyota</td><td>Alphard</td><td>150</td><td>2009</td><td>Минивэн</td>
+        <tr><td>Nissan</td><td>Sirena</td><td>140</td><td>2015</td><td>Минивэн</td>
+</p>
+</body>
+</html>

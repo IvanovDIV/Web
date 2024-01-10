@@ -1,0 +1,75 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: LightGreen;
+    width: 70%;
+    margin: auto;
+}
+
+.card{
+    background-color: white;
+    margin: 2px;
+    padding: 2px;
+}
+
+.JS{
+    grid-row: 1;
+    grid-column: 1/span 1;
+}
+
+.Prolog {
+    grid-row: 1;
+    grid-column: 2/span 2;
+}
+
+.Python{
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.J{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.C{
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.det{
+    font-weight: bold;
+}
+
+@media (max-width: 700px){
+    .content{
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .JS{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .Prolog {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    
+    .J{
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
+    .C{
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .Python{
+        grid-row: 5;
+        grid-column: 1;
+    }
+}

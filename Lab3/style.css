@@ -1,0 +1,210 @@
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: purple;
+}
+
+body{
+  background-attachment: fixed;
+  color: rgb(255, 255, 255);
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.item{
+  display: inline-block;
+  vertical-align: right;
+  text-align: right;
+  font-size: 35px;
+  margin: 0px 5px;
+}
+
+.menu{
+  display: inline-block ;
+  width: 100%;
+  float: none;
+  overflow: hidden;
+  margin: 0px auto;
+  margin-bottom: 60px;
+  text-align: right;
+}
+
+header{
+  width: 100%;
+  background: url("IMG/header.jpg") 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 230px;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer a{
+  font-size: 1em;
+  color: white;
+}
+
+.footer img{
+  height: 1.2em;
+  margin-right: 0.5%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.left{
+  float:left;
+}
+
+.right{
+  float: right;
+}
+
+.about{
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  font-size: 250%;
+  margin-top: 40px;
+  color: black;
+}
+
+.about-header{
+  margin: 20px 0px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.articles{
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.firstcard-image{
+  width: 100%;
+}
+
+.firstcard-image img{
+  height: 90%;
+  width: 45.78%;
+}
+
+.firstcard-name{
+  font-size: 250%;
+}
+
+.firstcard-text{
+  margin-left: 5px; 
+  width: 98%;
+  overflow: hidden;
+  text-align: justify;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical; 
+}
+
+
+.firstcard{
+  display: inline-block;
+  margin: 1%;
+  padding: 1%;
+  float: left;
+  width: 62%;
+  border: solid thin Magenta;
+  box-sizing: border-box;
+}
+
+.secondcard{
+  display: inline-block;
+  float: right;
+  margin: 1%;
+  padding: 1%;
+  width: 34%;
+  border: solid thin Magenta;
+  box-sizing: border-box;
+}
+
+.secondcard-image{
+  width: 100%;
+}
+
+.secondcard-image img{
+  height: 85%;
+  width: 86%;
+}
+
+.secondcard-name{
+  font-size: 250%;
+}
+
+.secondcard-text {
+  margin-left: 5px; 
+  width: 98%;
+  overflow: hidden;
+  text-align: justify;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical; 
+}
+
+.card{
+  display: inline-block;
+  padding: 1%;
+  width: 49%;
+  text-align: left;
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+.card-header{
+  display: inline-block;
+  width: 98%;
+}
+
+.card-headimg{
+  width: 49.5%;
+  text-align: center;
+  float: left;
+  height: 90%;
+}
+
+.card-headtext{
+  width: 49.5%;
+  float: right;
+  height: 100%;
+  font-size: 250%;
+}
+
+.card-text{
+  margin-left: 0.5%; 
+  width: 98%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical; 
+}
+
+.card-top{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card-bot {
+  display: inline-block;
+  vertical-align: bottom;
+}
