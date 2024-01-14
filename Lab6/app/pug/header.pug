@@ -1,0 +1,24 @@
+link(rel="stylesheet", href="css/header.css")
+link(rel="stylesheet", href="css/footer.css")
+-
+    var dictMenu = {
+        'Главная' :'index.html',
+        'Грузовые':'cargo.html',
+        'Легковые':'light.html',
+        'Список':'table.html'
+    }
+    var titleText = 'Легендарные машины'
+mixin createMenu(menu, active)
+    each value, key in dictMenu
+        if active == key
+           .item-a
+            a(href= value)= key 
+        else
+            .item 
+                a(href= value)= key
+block header
+.header
+  .header_title
+    h3= titleText
+  .menu
+    +createMenu(dictMenu,active_menu)

@@ -1,0 +1,48 @@
+-
+	var title = "главная"
+	var sub_img_list = [
+		'supra.jpg','surf.jpg','Hino.jpg','sky.jpg'
+	]
+	var sub_img_counter = 1
+	var logo_block_items = {
+		'supra.jpg':'Toyota Supra — серийный спортивный автомобиль, выпускающийся компанией Toyota с 1978 года. Дизайн Supra был перенят от Toyota Celica, но кузов стал длиннее и шире. Начиная с середины 1986 года, Supra отделилась от Celica, став самостоятельной моделью. В связи с этим Toyota перестала использовать префикс Celica, и автомобиль стал именоваться просто Supra. Первое, второе и третье поколения Supra собирались на заводе в Тахаре, а четвёртое и пятое поколение — на заводе в городе Тоёта в Японии',
+		'surf.jpg':'Легендарная тачка моего кента и просто хорошего человека. Тойота Сурф - это внедорожник, выпускаемый японской компанией Toyota с 1984 года. В некоторых странах он продавался под названием Toyota 4Runner.Первое поколение Тойота Сурф было выпущено в 1984 году и продолжало производиться до 1989 года. Он был основан на шасси Toyota Hilux и имел два варианта кузова: трехдверный и пятидверный. Спустя несколько лет, в 1990 году, было выпущено второе поколение Toyota Surf.',
+		'Hino.jpg':'TGE A-Type (1917) — первый Hino. Разработка этого автомобиля принесла производителю сотрудничество с японской армией, которая нуждалась в грузовом транспорте. Со временем компания модернизирует первый в Японии грузовик. В 1922 году начинается выпуск TGE G-Type, а к 1930 разрабатываются еще две новые модели.'
+	}
+	var block_left_title = 'Nissan Skyline'
+	var block_left_content = 'Nissan Skyline — автомобиль, выпускаемый в Японии с 1957 года, сначала фирмой Prince Motor Company, а затем концерном Nissan Motor, купившим Prince в 1966 году. К настоящему времени выпущено 13 поколений этого автомобиля.'
+	var block_title = 'Isuzu Giga'
+	var block_content = 'Isuzu Giga / Isuzu C-Серии / Isuzu E-Серии (Comfort/Economic) — cемейство крупнотоннажных грузовых автомобилей, серийно выпускаемых японской компанией Isuzu с 1994 года.'
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		title
+		link(rel="stylesheet", href="css/bootstrap-reboot.min.css")
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/header.css")
+		link(rel="stylesheet", href="css/footer.css")
+
+	body
+	include header
+	.sub-img
+		each value in sub_img_list
+			img(class = "sub-img-"+sub_img_counter,src="img/"+value, alt="")
+			- sub_img_counter+=1
+	.logo_block
+		each value,key in logo_block_items
+			.logo_item
+				img(src="img/"+key, alt="")
+				p=value
+	.final_block_left
+		img(src="img/sky.jpg", alt="")
+		.final_block_content
+			.final_block_content_title=block_left_title
+			.final_block_content_text=block_left_content		
+	.final_block
+		img(src="img/Giga.jpg", alt="")
+		.final_block_content
+			.final_block_content_title=block_title
+			.final_block_content_text=block_content
+	include footer
+

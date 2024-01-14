@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="icon" href="img/flag.jpg">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body background="img/back.jpg" np-repeat>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <div class="header">
+      <div class="header_title">
+        <h3>Легендарные машины</h3>
+      </div>
+      <div class="menu">
+            <div class="item"> <a href="index.html">Главная</a></div>
+            <div class="item"> <a href="cargo.html">Грузовые</a></div>
+            <div class="item"> <a href="light.html">Легковые</a></div>
+            <div class="item"> <a href="table.html">Список</a></div>
+      </div>
+    </div>
+    <p>
+      <details>
+        <summary>Фильтр</summary>
+        <form>
+          <p>
+            <label>Марка: 
+              <input class="input" type="text"><br>
+            </label>
+            <label>Название: 
+              <input class="input" type="text"><br>
+            </label>
+            <label>
+              Мощность двигателя: от
+              <input class="input" type="number" min="1" max="1500">до 
+              <input class="input" type="number" min="1" max="1500"><br>
+            </label>
+            <label>
+              Год выпуска: от
+              <input class="input" type="Date">до 
+              <input class="input" type="Date"><br>
+            </label>
+            <label>Тип кузова: 
+              <input class="input" type="text"><br>
+            </label>
+          </p>
+          <p>
+            <input class="btn" type="button" value="Найти">
+            <input class="btn" type="reset" value="Сбросить фильтр">
+          </p>
+        </form>
+      </details>
+    </p>
+    <p>
+      <details>
+        <summary>Сортировка</summary>
+        <form>
+          <p>Первый уровень:
+            <select>
+              <option>Марка</option>
+              <option>Название</option>
+              <option>Мощность двигателя(японские пони)</option>
+              <option>Год выпуска</option>
+              <option>Тип кузова</option>
+            </select>
+            <select>
+              <option>По возрастанию</option>
+              <option>По убыванию</option>
+            </select>
+          </p>
+          <p>Второй уровень:
+            <select>
+              <option>Марка</option>
+              <option>Название</option>
+              <option>Мощность двигателя(японские пони)</option>
+              <option>Год выпуска</option>
+              <option>Тип кузова</option>
+            </select>
+            <select>
+              <option>По возрастанию</option>
+              <option>По убыванию</option>
+            </select>
+          </p>
+          <p>Третий уровень:
+            <select>
+              <option>Марка</option>
+              <option>Название</option>
+              <option>Мощность двигателя(японские пони)</option>
+              <option>Год выпуска</option>
+              <option>Тип кузова</option>
+            </select>
+            <select>
+              <option>По возрастанию</option>
+              <option>По убыванию</option>
+            </select>
+          </p>
+          <p>
+            <input class="btn" type="button" value="Сортировать">
+            <input class="btn" type="reset" value="Сбросить настройки">
+          </p>
+        </form>
+      </details>
+    </p>
+    <p> 
+      <details>
+        <summary>График</summary>
+        <form>
+          <p>
+             Значение по оси OX:<br>
+            <label> 
+              <input class="input" type="radio" name="graph" value="power">Мощность 
+            </label><br>
+            <label>
+              <input class="input" type="radio" name="graph" value="attacktype">Год выпуска
+            </label><br>
+            <label> 
+              <input class="input" type="radio" name="graph" value="attackdelay">Марка 
+            </label><br>
+          </p>
+          <p>Результат:<br>
+            <label>
+              <input class="input" type="checkbox" name="graph" value="minhp">Средний год
+            </label><br>
+            <label> 
+              <input class="input" type="checkbox" name="graph" value="avghp">Максимальная мощность<br>
+            </label>
+            <label> 
+              <input class="input" type="checkbox" name="graph" value="maxhp">Минимальная мощность<br>
+            </label>
+            <label> 
+              <input class="input" type="checkbox" name="graph" value="heroesamount">Количество марок<br>
+            </label>
+            <label> 
+              <input class="input" type="checkbox" name="graph" value="minmana">Количество кузовов<br>
+            </label>
+          </p><br>
+          <p>
+            <input type="button" value="Построить">
+            <input type="reset" value="Сбросить настройки">
+          </p>
+        </form>
+      </details>
+    </p>
+    <table class="table" border="2">
+      <tr>
+        <th>Марка</th>
+        <th>Название</th>
+        <th>Мощность двигателя(японские пони)</th>
+        <th>Год выпуска</th>
+        <th>Тип кузова</th>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>Surf</td>
+        <td>183</td>
+        <td>1986</td>
+        <td>Кроссовер</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>Supra</td>
+        <td>544</td>
+        <td>1998</td>
+        <td>Купе</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>Mark II</td>
+        <td>220</td>
+        <td>1986</td>
+        <td>Седан</td>
+      </tr>
+      <tr>
+        <td>Honda</td>
+        <td>Accord</td>
+        <td>160</td>
+        <td>1980</td>
+        <td>Седан</td>
+      </tr>
+      <tr>
+        <td>Mitsubisi</td>
+        <td>Lancer Evolution VIII</td>
+        <td>280</td>
+        <td>2003</td>
+        <td>Седан</td>
+      </tr>
+      <tr>
+        <td>Subaru</td>
+        <td>Legacy</td>
+        <td>149</td>
+        <td>1992</td>
+        <td>Седан</td>
+      </tr>
+      <tr>
+        <td>Infinity</td>
+        <td>QX56</td>
+        <td>313</td>
+        <td>2005</td>
+        <td>Внедорожник</td>
+      </tr>
+      <tr>
+        <td>Mazda</td>
+        <td>RX-7</td>
+        <td>300</td>
+        <td>1992</td>
+        <td>Купе</td>
+      </tr>
+      <tr>
+        <td>Nissan</td>
+        <td>Skyline</td>
+        <td>400</td>
+        <td>1990</td>
+        <td>Седан</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>Surf</td>
+        <td>183</td>
+        <td>1986</td>
+        <td>Кроссовер</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>Surf</td>
+        <td>183</td>
+        <td>1986</td>
+        <td>Кроссовер</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>Surf</td>
+        <td>183</td>
+        <td>1986</td>
+        <td>Кроссовер</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>Surf</td>
+        <td>183</td>
+        <td>1986</td>
+        <td>Кроссовер</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>Surf</td>
+        <td>183</td>
+        <td>1986</td>
+        <td>Кроссовер</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>Surf</td>
+        <td>183</td>
+        <td>1986</td>
+        <td>Кроссовер</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>Surf</td>
+        <td>183</td>
+        <td>1986</td>
+        <td>Кроссовер</td>
+      </tr>
+    </table>
+    <div class="footer">
+      <div class="footer_left">© Иванов Д.И., Б9121-09.03.04, 2023-2024</div>
+      <div class="footer_right">Контакты</div>
+    </div>
+  </body>
+</html>

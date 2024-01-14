@@ -1,0 +1,28 @@
+-
+	var block_left_title = 'Toyota Surf'
+	var block_left_content = 'Toyota 4Runner - это внедорожник, выпускаемый японским автопроизводителем Toyota и продаваемый по всему миру с 1984 года в пяти поколениях. В Японии он продавался как Toyota Hilux Surf (японский: яп.Хепберн: Toyota Hairakkususāfu) и был снят с рынка в 2009 году. Оригинальный 4Runner был компактным внедорожником и немногим больше пикапа Toyota Hilux с кузовом из стекловолокна над кузовом, но с тех пор модель претерпела значительное независимое развитие, превратившись в нечто среднее между компактным и среднеразмерным внедорожником. Все 4Runners были построены в Японии на заводе Toyota в Тахаре, Айти, или на заводе Hino Motors (дочерней компании Toyota) в Хамуре.'
+	var block_title = 'Toyota SUBWAAA'
+	var block_content = 'Фиолетовая Supra, использованная в "Форсаж 7", была личной машиной покойного актера Пола Уокера.Согласно неназванным источникам, связанным с веб-сайтом Automotive Addicts.com, белая Toyota Supra может быть моделью 1998 года, поскольку Пол Уокер, как сообщается, владел двумя белыми Supra MK IV - 1995 и 1998 годов выпуска. Однако различные источники утверждают, что Supra, использованная в Форсаж 7, была Supra Уокера 1995 года выпуска.Звук автомобиля повторно использован от Mitsubishi Eclipse GSX Брайана 1995 года выпуска из первого фильма.'
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		link(rel="stylesheet", href="css/bootstrap-reboot.min.css")
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/header.css")
+		link(rel="stylesheet", href="css/footer.css")
+
+	body
+	include header
+	.final_block_left
+		img(src="img/surf.jpg")
+		.final_block_content
+			.final_block_content_title=block_left_title
+			.final_block_content_text=block_left_content		
+	.final_block
+		img(src="img/supra.jpg")
+		.final_block_content
+			.final_block_content_title=block_title
+			.final_block_content_text=block_content
+	include footer
+
