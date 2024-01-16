@@ -10,7 +10,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  color: Aqua;
+  color: Navy;
   margin: 0;
   padding: 0;
 }
@@ -82,14 +82,6 @@ _title {
   font-weight: 700;
   font-size: 25px;
 }
-.table {
-  margin: auto;
-  text-align: center;
-}
-.table td,
-.table th {
-  padding: 5px;
-}
 .final_block_left {
   width: 100%;
   margin: 0 auto;
@@ -145,6 +137,21 @@ _title {
 }
 .image-hino img {
   width: 50%;
+}
+.table,
+td,
+th {
+  border: 1px solid;
+  margin: auto;
+  text-align: center;
+}
+.table td,
+td td,
+th td,
+.table th,
+td th,
+th th {
+  padding: 5px;
 }
 @media (max-width: 1024px) {
   .sub_img {

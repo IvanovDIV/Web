@@ -7,6 +7,7 @@ link(rel="stylesheet", href="css/footer.css")
         'Легковые':'light.html',
         'Список':'table.html'
     }
+    var active = 'Главная'
     var titleText = 'Легендарные машины'
 mixin createMenu(menu, active)
     each value, key in dictMenu
@@ -21,4 +22,4 @@ block header
   .header_title
     h3= titleText
   .menu
-    +createMenu(dictMenu,active_menu)
+    +createMenu(dictMenu,active)

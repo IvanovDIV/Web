@@ -6,11 +6,9 @@ html(lang="ru")
         title
         link(rel='icon' href='img/flag.jpg')
         link(rel="stylesheet" href="css/main.css")
-    body(background = backpict, np-repeat)
-        include header
+    body 
+        block header
+            include header.pug
         block content
-        include footer
-
-
-    
-
+        footer 
+            include footer.pug
