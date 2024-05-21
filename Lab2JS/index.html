@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <title>Комплексные числа</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Калькулятор комплексных чисел</h1>
+  <div id="calculator">
+    <div id="complex-number-form">
+      <input type="radio" id="algebraic" name="number-form" value="algebraic" checked>
+      <label for="algebraic">Алгебраическая</label>
+      <input type="radio" id="trigonometric" name="number-form" value="trigonometric">
+      <label for="trigonometric">Тригонометрическая</label>
+      <button id="show-form">Показать</button>
+
+      <div id="algebraic-form">
+        <label for="real-part">Действительная часть:</label>
+        <input type="number" id="real-part">
+        <label for="imaginary-part">Минимая часть:</label>
+        <input type="number" id="imaginary-part">
+      </div>
+
+      <div id="trigonometric-form" style="display: none;">
+        <label for="magnitude">Модуль числа:</label>
+        <input type="number" id="magnitude">
+        <label for="angle">Угол (в радианах):</label>
+        <input type="number" id="angle">
+      </div>
+    </div>
+
+    <div id="operations">
+      <label for="operation-select">Выбор операций:</label>
+      <select id="operation-select" multiple>
+        <option value="real">Действительная часть</option>
+        <option value="argument">Аргумент</option>
+        <option value="imaginary">Мнимая часть</option>
+      </select>
+    </div>
+
+    <button id="calculate">Вычислить</button>
+    <button id="clear">Очистить</button>
+
+    <div id="error-message" class="error"></div>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="program.js"></script>
+</body>
+</html>

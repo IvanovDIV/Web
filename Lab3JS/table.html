@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Легендарные машины</title>
+  <link rel="icon" href="img/flag.jpg">
+  <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+  <link rel="stylesheet" href="CSS/header.css">
+  <link rel="stylesheet" href="CSS/footer.css">
+  <div class="header">
+    <div class="header_title">
+      <h3>Легендарные машины</h3>
+    </div>
+    <div class="menu">
+      <div class="item-a"><a href="index.html">Главная</a></div>
+      <div class="item"><a href="cargo.html">Грузовые</a></div>
+      <div class="item"><a href="light.html">Легковые</a></div>
+      <div class="item"><a href="table.html">Список</a></div>
+    </div>
+  </div>
+  <p>
+    <details>
+      <summary>Фильтр</summary>
+      <form id="filter">
+        <p>
+          <label for="brand">Марка:</label> 
+            <input type="text" id="brand"><br>
+        </p>
+        <p>
+          <label for="name">Название:</label>
+            <input type="text" id="name"><br>
+        </p>
+        <p>
+          <label for="powerFrom">Мощность двигателя:</label> 
+          от<input type="number" id="powerFrom" min="1" max="1500"> 
+          до <input type="number" id="powerTo" min="1" max="1500"><br>
+          </label>
+        </p>
+        <p>
+          <label for="yearFrom">Год выпуска:</label>
+            от<input type="number" id="yearFrom" min="1900" max="2024"> 
+            до <input type="number" id="yearTo" min="1900" max="2024"><br>
+        </p>
+        <p>
+          <label for="bodyType">Тип кузова:</label> 
+            <input type="text" id="bodyType"><br>
+        </p>
+        <p>
+          <input class="btn" type="button" value="Найти" id="find">
+          <input class="btn" type="reset" value="Очистить фильтры" id="clearFilters">
+        </p>
+      </form>
+    </details>
+  </p>
+  <p>
+    <details>
+      <summary>Сортировка</summary>
+      <form id="sort">
+        <p>Первый уровень:
+            <select id="fieldsFirst"></select>
+            по убыванию? <input type="checkbox" id="fieldsFirstDesc">
+        </p>
+        <p>Второй уровень:
+            <select id="fieldsSecond"></select>
+            по убыванию? <input type="checkbox" id="fieldsSecondDesc">
+        </p>
+        <p>Третий уровень:
+            <select id="fieldsThird"></select>
+            по убыванию? <input type="checkbox" id="fieldsThirdDesc">
+        </p>
+        <p>
+            <input type="button" value="Сортировать" id="sortbutton">
+            <input type="reset" value="Сбросить настройки" id="resetsort">
+        </p>
+    </form>
+    </details>
+  </p>
+  <p>
+    <details>
+      <summary>График</summary>
+      <form id="graphForm">
+        <p>
+           Значение по оси OX:<br>
+          <label> 
+            <input class="input" type="radio" name="graph" value="power">Мощность 
+          </label><br>
+          <label>
+            <input class="input" type="radio" name="graph" value="year">Год выпуска
+          </label><br>
+          <label> 
+            <input class="input" type="radio" name="graph" value="brand">Марка 
+          </label><br>
+        </p>
+        <p>Результат:<br>
+          <label>
+            <input class="input" type="checkbox" name="graph" value="avgYear">Средний год
+          </label><br>
+          <label> 
+            <input class="input" type="checkbox" name="graph" value="maxPower">Максимальная мощность<br>
+          </label>
+          <label> 
+            <input class="input" type="checkbox" name="graph" value="minPower">Минимальная мощность<br>
+          </label>
+          <label> 
+            <input class="input" type="checkbox" name="graph" value="brandCount">Количество марок<br>
+          </label>
+          <label> 
+            <input class="input" type="checkbox" name="graph" value="bodyTypeCount">Количество кузовов<br>
+          </label>
+        </p><br>
+        <p>
+          <input type="button" value="Построить">
+          <input type="reset" value="Сбросить настройки">
+        </p>
+      </form>
+    </details>
+  </p>
+  <table id="list"></table>
+  <footer> 
+    <div class="footer">
+      <div class="footer_left">© Иванов Д.И., Б9121-09.03.04, 2023-2024</div>
+      <div class="footer_right">Контакты</div>
+    </div>
+  </footer> 
+</body>
+  <script src="JS/main.js"></script>
+  <script src="JS/data.js"></script>
+</html>
