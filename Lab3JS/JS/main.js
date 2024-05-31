@@ -90,7 +90,6 @@ let clearFilter = (idTable, formData) => {
   createTable(cars, 'list');
 }
 
-///
 let selectedOptions = {}
 
 let createOption = (str, val) => {
@@ -169,70 +168,62 @@ let createSortArr = (data) => {
 
 
 let sortTable = (idTable, data) => {
-  let sortArr = createSortArr(data);
-  if (sortArr.length === 0) {
-      return false;
-  }
-  let table = document.getElementById(idTable);
-  let rowData = Array.from(table.rows);
-  rowData.shift();
-  rowData.sort((first, second) => {
-      for (let i = 0; i < sortArr.length; i++) {
-          let key = sortArr[i].column;
-          let order = sortArr[i].order;
-          if (order) {
-              if (key == 3) {
-                  if (Number(first.cells[key].innerHTML) < Number(second.cells[key].innerHTML)) {
-                      return 1;
-                  } else if (Number(first.cells[key].innerHTML) > Number(second.cells[key].innerHTML)) {
-                      return -1;
-                  }
-              } else {
-                  if (first.cells[key].innerHTML < second.cells[key].innerHTML) {
-                      return 1;
-                  } else if (first.cells[key].innerHTML > second.cells[key].innerHTML) {
-                      return -1;
-                  }
-              }
-          } else {
-              if (key == 3) {
-                  if (Number(first.cells[key].innerHTML) > Number(second.cells[key].innerHTML)) {
-                      return 1;
-                  } else if (Number(first.cells[key].innerHTML) < Number(second.cells[key].innerHTML)) {
-                      return -1;
-                  }
-              } else {
-                  if (first.cells[key].innerHTML > second.cells[key].innerHTML) {
-                      return 1;
-                  } else if (first.cells[key].innerHTML < second.cells[key].innerHTML) {
-                      return -1;
-                  }
-              }
-          }
-
-      }
-      return 0;
-  });
-  table.innerHTML = table.rows[0].innerHTML;
-  rowData.forEach(item => {
-      table.append(item);
-  });
+    let sortArr = createSortArr(data);
+    if (sortArr.length === 0) {
+        return false;
+    }
+    let table = document.getElementById(idTable);
+    let rowData = Array.from(table.rows);
+    rowData.shift();
+    rowData.sort((first, second) => {
+        for (let i = 0; i < sortArr.length; i++) {
+            let key = sortArr[i].column;
+            let order = sortArr[i].order;
+            let firstValue = parseFloat(first.cells[key].innerHTML);
+            let secondValue = parseFloat(second.cells[key].innerHTML);
+            if (isNaN(firstValue) || isNaN(secondValue)) {
+                firstValue = first.cells[key].innerHTML;
+                secondValue = second.cells[key].innerHTML;
+            }
+            if (order) {
+                if (firstValue < secondValue) {
+                    return 1;
+                } else if (firstValue > secondValue) {
+                    return -1;
+                }
+            } else {
+                if (firstValue > secondValue) {
+                    return 1;
+                } else if (firstValue < secondValue) {
+                    return -1;
+                }
+            }
+        }
+        return 0;
+    });
+    table.innerHTML = table.rows[0].innerHTML;
+    rowData.forEach(item => {
+        table.append(item);
+    });
 }
+
+
 
 function resetSort(idTable) {
-  removeAllRows(idTable)
-  createTable(cars, 'list');
-  for (let key in selectedOptions) {
-      selectedOptions[key] = false
-  }
-  let allSelect = document.getElementById('sort').getElementsByTagName('select');
-  for (let j = 0; j < allSelect.length; j++) {
-      if (j != 0) {
-          allSelect[j].disabled = true
-      }
-      allSelect[j].value = 0
-  }
+    let formData = document.getElementById('filter'); // Получаем данные из формы фильтрации
+    filterTable(cars, idTable, formData); // Применяем фильтры к данным
+    for (let key in selectedOptions) {
+        selectedOptions[key] = false;
+    }
+    let allSelect = document.getElementById('sort').getElementsByTagName('select');
+    for (let j = 0; j < allSelect.length; j++) {
+        if (j != 0) {
+            allSelect[j].disabled = true;
+        }
+        allSelect[j].value = 0;
+    }
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   createTable(cars, 'list');
@@ -242,30 +233,81 @@ document.addEventListener("DOMContentLoaded", function () {
   findButton.addEventListener('click', function () {
       let dataForm = document.getElementById('filter');
       filterTable(cars, 'list', dataForm);
-      // let formData = document.getElementById('sort');
-      // resetSort('list', formData);
   });
   let clearButton = document.getElementById('clearFilters');
   clearButton.addEventListener('click', function () {
       let formData = document.getElementById('filter');
       clearFilter('list', formData);
-      // let dataForm = document.getElementById('sort');
-      // resetSort('list', dataForm);
   });
 
   document.getElementById('fieldsFirst').onchange = () => {
-      changeNextSelect('fieldsSecond', document.getElementById('fieldsFirst'))
-      if (document.getElementById('fieldsFirst').value==0) {
-          resetSort('list')
-      }
-  }
+    changeNextSelect('fieldsSecond', document.getElementById('fieldsFirst'));
+    if (document.getElementById('fieldsFirst').value == 0) {
+        resetSort('list');
+        document.getElementById('fieldsFirstDesc').checked = false;
+        document.getElementById('fieldsSecondDesc').checked = false;
+        document.getElementById('fieldsThirdDesc').checked = false;
+    }
+}
 
-  document.getElementById('fieldsSecond').onchange = () => {
-      changeNextSelect('fieldsThird', document.getElementById('fieldsSecond'))
-      if (document.getElementById('fieldsSecond').value==0) {
-          resetSort('list')
-      }
-  }
+document.getElementById('fieldsSecond').onchange = () => {
+    changeNextSelect('fieldsThird', document.getElementById('fieldsSecond'));
+    if (document.getElementById('fieldsSecond').value == 0) {
+        // Применяем сортировку только по первому уровню
+        sortTable('list', document.getElementById('sort'));
+        document.getElementById('fieldsSecondDesc').checked = false;
+        document.getElementById('fieldsThirdDesc').checked = false;
+    }
+}
+
+document.getElementById('fieldsThird').onchange = () => {
+    if (document.getElementById('fieldsThird').value == 0) {
+        // Применяем сортировку только по первому и второму уровню
+        document.getElementById('fieldsThirdDesc').checked = false;
+    }
+}
+
+function resetSort(idTable) {
+    let formData = document.getElementById('filter'); // Получаем данные из формы фильтрации
+    filterTable(cars, idTable, formData); // Применяем фильтры к данным
+    for (let key in selectedOptions) {
+        selectedOptions[key] = false;
+    }
+    let allSelect = document.getElementById('sort').getElementsByTagName('select');
+    for (let j = 0; j < allSelect.length; j++) {
+        if (j != 0) {
+            allSelect[j].disabled = true;
+        }
+        allSelect[j].value = 0;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    createTable(cars, 'list');
+    let sortForm = document.getElementById('sort');
+    setSortSelects(cars[0], sortForm);
+    let findButton = document.getElementById('find');
+    findButton.addEventListener('click', function () {
+        let dataForm = document.getElementById('filter');
+        filterTable(cars, 'list', dataForm);
+    });
+    let clearButton = document.getElementById('clearFilters');
+    clearButton.addEventListener('click', function () {
+        let formData = document.getElementById('filter');
+        clearFilter('list', formData);
+    });
+
+    let sortbutton = document.getElementById('sortbutton');
+    sortbutton.addEventListener('click', function () {
+        let formData = document.getElementById('sort');
+        sortTable('list', formData);
+    });
+
+    let resetButton = document.getElementById('resetsort');
+    resetButton.addEventListener('click', function () {
+        resetSort('list');
+    });
+});
 
   let sortbutton = document.getElementById('sortbutton');
   sortbutton.addEventListener('click', function () {

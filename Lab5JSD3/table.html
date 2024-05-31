@@ -80,33 +80,34 @@
   </p>
   <p>
     <details>
-      <summary>График</summary>
-      <form id="graphForm">
-        <p>
-           Значение по оси OX:<br>
-          <label> 
-            <input type="radio" name="ox" value="Марка" checked>Марка
-          </label><br>
-          <label>
-            <input type="radio" name="ox" value="Год выпуска">Год выпуска
-          </label><br>
-        </p>
-        <p>Значения по оси OY:<br>
-          <label>
-            <input type="checkbox" name="oy">Максимальная мощность
-          </label><br>
-          <label> 
-            <input type="checkbox" name="oy">Минимальная мощность<br>
-          </label>
-        </p><br>
-          <p>
-            <input type="button" value="Построить" onclick="drawGraph(this.form)">
-            <input type="button" value="Сбросить график" id="resetGraphButton">
-          </p>
-      </form>
-      </div>
+        <summary>График</summary>
+        <form id="graphForm">
+            <p>
+                Значение по оси OX:<br>
+                <label>
+                    <input type="radio" name="ox" value="Марка" checked>Марка
+                </label><br>
+                <label>
+                    <input type="radio" name="ox" value="Год выпуска">Год выпуска
+                </label><br>
+            </p>
+            <p>Значения по оси OY:<br>
+                <label>
+                    <input type="checkbox" name="oy">Максимальная мощность
+                </label><br>
+                <label>
+                    <input type="checkbox" name="oy">Минимальная мощность<br>
+                </label>
+            </p><br>
+            <p>
+                <input type="button" value="Построить" onclick="drawGraph(this.form)">
+                <input type="button" value="Сбросить график" id="resetGraphButton">
+                <input type="button" value="Построить столбчатый график" id="barGraphButton">
+            </p>
+        </form>
+        <svg height=10> </svg>
     </details>
-  </p>
+</p>
   <table id="list"></table>
   <footer> 
     <div class="footer">
@@ -116,5 +117,4 @@
   </footer> 
 </body>
   <script src="JS/main.js"></script>
-  <script src="JS/data.js"></script>
 </html>
