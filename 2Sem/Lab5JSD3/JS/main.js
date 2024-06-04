@@ -346,7 +346,7 @@ const createAxis = (data) => {
 };
 
 function createBarChart(arrGraph, scaleX, scaleY, index, color) {
-    const barWidth = scaleX.bandwidth() / 2; // bar width
+    const barWidth = scaleX.bandwidth() / 3; // bar width
 
     svg.selectAll(".bar" + index)
         .data(arrGraph)
