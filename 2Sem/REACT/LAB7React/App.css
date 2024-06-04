@@ -1,0 +1,33 @@
+.app {
+  background-image: url('https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666431950_54-mykaleidoscope-ru-p-tikhon-miyagi-oboi-55.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 0, 247);
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1, h2, p {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+code {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 50px;
+  color: rgb(255, 2, 255);
+}
